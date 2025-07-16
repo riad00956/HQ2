@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: video-enhancer-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        fromDotEnv: true
+      - key: PERFECT_API_KEY
+        fromDotEnv: true
+      - key: PORT
+        fromDotEnv: true
